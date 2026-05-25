@@ -1,0 +1,45 @@
+{
+  "name": "playwright-ecommerce-automation",
+  "version": "1.0.0",
+  "description": "Production-grade Playwright automation framework with UI + API testing for e-commerce workflows",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test",
+    "test:ui": "playwright test tests/ui/",
+    "test:api": "playwright test tests/api/",
+    "test:smoke": "playwright test --grep @smoke",
+    "test:regression": "playwright test --grep @regression",
+    "test:headed": "playwright test --headed",
+    "test:debug": "playwright test --debug",
+    "report": "playwright show-report",
+    "lint": "eslint . --ext .ts",
+    "lint:fix": "eslint . --ext .ts --fix",
+    "format": "prettier --write \"**/*.{ts,json,md}\"",
+    "format:check": "prettier --check \"**/*.{ts,json,md}\"",
+    "type-check": "tsc --noEmit",
+    "pretest": "npm run type-check"
+  },
+  "keywords": [
+    "playwright",
+    "typescript",
+    "automation",
+    "testing",
+    "e2e",
+    "api-testing",
+    "page-object-model"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@playwright/test": "^1.60.0",
+    "@types/node": "^22.0.0",
+    "@typescript-eslint/eslint-plugin": "^7.0.0",
+    "@typescript-eslint/parser": "^7.0.0",
+    "dotenv": "^16.4.5",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-playwright": "^1.6.0",
+    "prettier": "^3.3.0",
+    "typescript": "^5.5.0"
+  }
+}
