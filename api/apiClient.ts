@@ -19,7 +19,7 @@ export class ApiClient {
     this.baseUrl = config.api.baseUrl;
   }
 
-  async getUsers(page: number = 1) {
+  async getUsers(_page: number = 1) {
     Logger.info(`GET /users`);
     const response = await this.request.get(`${this.baseUrl}/users`);
     return response;
